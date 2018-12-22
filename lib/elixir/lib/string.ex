@@ -2254,6 +2254,10 @@ defmodule String do
   `string` must be the string representation of a float including a decimal point.
   In order to parse a string without decimal point as a float then `Float.parse/1`
   should be used. Otherwise, an `ArgumentError` will be raised.
+  
+  The first character of `string` must not be a decimal point (ex. ".7"). 
+  In this case, an `ArgumentError` will be raised. You may prepend a "0"
+  to strings in this format before calling the function.
 
   Inlined by the compiler.
 
